@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Cards</title>
+    <Style>
+        /* https://css-tricks.com/fighting-the-space-between-inline-block-elements/ */
+        /* รวมวิธีแก้ปัญหา */
+        .card {
+            display: inline-block;
+            /* display: block; */
+            /* สามารถใช้ได้เพราะ block ไม่มีแถบmargin */
+            box-shadow: 4px 8px 8px rgb(228, 224, 224);
+            width: 300px;
+            border-radius: 5px;
+            margin: 5px;
+            /* font-size: 0; */
+            /* กำหนด font-size: 0; และใส่ font-size: initial; ใน.contrainer*/
+            /* background-color: lightgray; */
+            /* สามารถใช้ได้เหมือนกัน โดยที่ไม่ต้องใส่ bgcolorใน .container */
+        }
+
+        img {
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+            /* margin-bottom: -4px; */
+        }
+
+        .container {
+            /* font-size: initial; */
+            margin-top: -4px;
+            padding: 2px 16px;
+            text-align: center;
+            background-color: lightgrey;
+            border-radius: 0px 0px 5px 5px;
+        }
+    </Style>
+</head>
+
+<body>
+
+    <h2>
+        Image Gallery Card
+    </h2>
+    <div class="card">
+        <img src="https://picsum.photos/250">
+        <div class="container">
+            <h4>
+                <b>
+                    Nice Picture
+                </b>
+            </h4>
+            <p>
+                A beautiful Picture
+            </p>
+        </div>
+
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/250">
+        <div class="container">
+            <h4>
+                <b>
+                    Nice Picture
+                </b>
+            </h4>
+            <p>
+                A beautiful Picture
+            </p>
+        </div>
+
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/250">
+        <div class="container">
+            <h4>
+                <b>
+                    Nice Picture
+                </b>
+            </h4>
+            <p>
+                A beautiful Picture
+            </p>
+        </div>
+
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/250">
+        <div class="container">
+            <h4>
+                <b>
+                    Nice Picture
+                </b>
+            </h4>
+            <p>
+                A beautiful Picture
+            </p>
+        </div>
+
+    </div>
+    <div class="card">
+        <img src="https://picsum.photos/250">
+        <div class="container">
+            <h4>
+                <b>
+                    Nice Picture
+                </b>
+            </h4>
+            <p>
+                A beautiful Picture
+            </p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

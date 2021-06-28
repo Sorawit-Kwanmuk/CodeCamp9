@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML CSS JS</title>
+<style>
+    .row {
+  /* height: 100px; */
+  background: red;
+  overflow: hidden;
+  padding: 10px;
+}
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.logo {
+  /* display: inline-block; */
+  position: relative;
+  top: 20;
+  float: left;
+  background: lightgreen;
+}
+nav {
+  /* display: inline-block; */
+  float: right;
+  background: skyblue;
+}
+</style>
+</head>
+<body>
+    <div class="row">
+      <div class="logo">LOGO</div>
+      <nav>-------------Nav-------------</nav>
+    
+    </div>
+      <p>
+        Codecamp9
+      </p>  
+      <div class="row">
+      <div class="logo">LOGO</div>
+      <nav>-------------Nav-------------</nav>
+    
+    </div>
+      <div class="row">
+      <div class="logo">LOGO</div>
+        <div class="logo">LOGO</div>
+      <nav>-------------Nav-------------</nav>
+    
+    </div>
+    </body>
+</html>

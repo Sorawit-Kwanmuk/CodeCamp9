@@ -1,0 +1,193 @@
+/* temp */
+section,
+header,
+/*footer {
+  outline: 1px dashed lime;
+}
+.container {
+  outline: 1px dashed red;
+}*/
+/*Global*/
+h1,
+body {
+    margin: 0;
+}
+
+html {
+    background: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+body {
+    max-width: 1400px;
+    background: lightblue;
+    margin: auto;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.current {
+    color: deeppink;
+    font-weight: bold;
+}
+
+/* Header*/
+header {
+    background-color: skyblue;
+    color: whitesmoke;
+    min-height: 70px;
+    padding-top: 30px;
+    border-bottom: 3px solid salmon;
+}
+
+header.branding {
+    float: left;
+}
+
+header nav {
+    float: right;
+    margin-top: 15px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+header a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: inherit;
+    /*คือการนำสีมาจากhtmlที่กำหนดไว้ด้านบน*/
+}
+
+header a:hover {
+    color: pink;
+}
+
+header span {
+    color: deeppink;
+}
+
+/*Showcase*/
+.showcase {
+    min-height: 400px;
+    background: url("https://picsum.photos/id/2/1500/500/?blur=4") no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: white;
+}
+
+.showcase h1 {
+    margin-top: 100px;
+    font-size: 55px;
+}
+
+.showcase p {
+    font-size: 20px;
+    color: deeppink;
+    width: 80%;
+    margin: auto;
+}
+
+/*newslatter*/
+.newsletter {
+    padding: 15px;
+    background: lightskyblue;
+    color: coral;
+}
+
+.newsletter h1 {
+    float: left;
+}
+
+.newsletter form {
+    float: right;
+}
+
+.newsletter input[type="email"] {
+    /*tag input ที่มีatribute = email*/
+    width: 250px;
+    height: 25px;
+    padding: 4px;
+    border-radius: 4px;
+    border: none;
+}
+
+.newsletter button {
+    height: 35px;
+    background-color: coral;
+    color: white;
+    border-radius: 4px;
+    border: none;
+    padding: 0 20px;
+}
+
+.boxes {
+    margin-top: 20px;
+}
+
+.boxes .box {
+    width: 30%;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: whitesmoke;
+    background-color: skyblue;
+    text-align: center;
+}
+
+.boxes2 .about_as {
+    width: 60%;
+    float: left;
+    margin-left: 10px;
+    margin-top: -20px;
+}
+
+.boxes2 .what_we_do {
+    width: 25%;
+    float: left;
+    padding: 10px;
+    margin-left: 20px;
+    background-color: violet;
+    margin-top: 30px;
+}
+
+.boxes4 {
+    width: 60%;
+    float: left;
+
+    margin-top: -20px;
+}
+.services {
+    width: 90%;
+    background-color: wheat;
+    margin-bottom: 20px;
+}
+.get_a_quotel {
+    width: 30%;
+    float: left;
+    padding: 10px;
+    background-color: violet;
+    margin-top: 30px;
+}
+.boesx3 {
+    margin: 0%;
+}

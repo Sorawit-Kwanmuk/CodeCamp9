@@ -1,0 +1,99 @@
+body {
+    background-image: url(./src/Background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit -sticky;
+    position: sticky;
+    top: 0;
+}
+li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 9px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  li a:hover {
+    background-color: #111;
+    
+  }
+  
+  .active {
+    background-color: #292a83;
+  }
+  .glow {
+    color: #fff;
+    text-align: center;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e6e200, 0 0 40px #e6e200, 0 0 50px #e6d700, 0 0 60px #e6e200, 0 0 70px #e6d700;
+    }
+    
+    to {
+      text-shadow: 0 0 10px #fff, 0 0 30px #fffc4d, 0 0 40px #ffe44d, 0 0 50px #fffc4d, 0 0 60px #ffe44d, 0 0 70px #fffc4d, 0 0 80px #fcff4d;
+    }
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+  h3 {
+    text-align: center;
+    margin-top: 10%;
+    font-size: 25px;
+  }
+
+.centered {
+  position: absolute;
+  right: 0%;
+}
+img {
+    margin-top: -7px;
+    margin-left: 0px;
+    width: 40px;
+    height: auto;
+}
+.button {
+    background-color: rgba(0, 0, 255, 0.4);
+    color: 111;
+    border: 2px solid #000000;
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    
+  }
+.button:hover {
+    background-color: #000000;
+    color: #ffffff;
+    
+}
+.position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0">
+    <title>Book Flight</title>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+        tr,
+        td {
+            text-align: left;
+            border: 0px solid rgb(250, 248, 248);
+            border-collapse: collapse;
+            padding: 15px;
+           
+        }
+        table.center {
+            margin-top: 10%;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <table class="center">
+            <p >Book Flight</p>
+            <tr>
+                <td colspan="2" background color="black">
+                    <label for="flying_from">Flying from</label><br>
+                    <select name="location_1">
+                        <option value="bankkok">Bangkok</option>
+                        <option value="krabi">Krabi</option>
+                        <option value="phruket">Phruket</option>
+                        <option selected="selected" value="none">None</option>
+                    </select>
+                </td>
+                <td colspan="2"><label for="to">To</label><br>
+                    <select name="location_2">
+                        <option value="chiang_mai">Chiang Mai</option>
+                        <option value="chonburi">Chonburi</option>
+                        <option value="phichit">Phichit</option>
+                        <option selected="selected" value="none">None</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="departing">Departing</label><br>
+                    <input type="date" id="Departure_date" name="Departure_date">
+                </td>
+                <td colspan="2">
+                    <label for="returning">Returning</label><br>
+                    <input type="date" id="return_date" name="return_date">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="adult">Adult</label><br>
+                    <select name="adult">
+                        <option selected="adult" value="adult">0</option>
+                        <option value="adult">1</option>
+                        <option value="adult">2</option>
+                        <option value="adult">3</option>
+                        <option value="adult">4</option>
+                        <option value="adult">5</option>
+                        <option value="adult">6</option>
+                        <option value="adult">7</option>
+                        <option value="adult">8</option>
+                        <option value="adult">9</option>
+                        <option value="adult">10</option>
+                        <option value="adult">11</option>
+                        <option value="adult">12</option>
+                        <option value="adult">13</option>
+                        <option value="adult">14</option>
+                        <option value="adult">15</option>
+                        <option value="adult">16</option>
+                        <option value="adult">17</option>
+                        <option value="adult">18</option>
+                        <option value="adult">19</option>
+                        <option value="adult">20</option>
+                        <option value="adult">21</option>
+                        <option value="adult">22</option>
+                        <option value="adult">23</option>
+                        <option value="adult">24</option>
+                        <option value="adult">25</option>
+                        <option value="adult">26</option>
+                        <option value="adult">27</option>
+                        <option value="adult">28</option>
+                        <option value="adult">29</option>
+                        <option value="adult">30</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="child">Child</label><br>
+                    <select name="child">
+                        <option selected="child" value="child">0</option>
+                        <option value="child">1</option>
+                        <option value="child">2</option>
+                        <option value="child">3</option>
+                        <option value="child">4</option>
+                        <option value="child">5</option>
+                        <option value="child">6</option>
+                        <option value="child">7</option>
+                        <option value="child">8</option>
+                        <option value="child">9</option>
+                        <option value="child">10</option>
+                        <option value="child">11</option>
+                        <option value="child">12</option>
+                        <option value="child">13</option>
+                        <option value="child">14</option>
+                        <option value="child">15</option>
+                        <option value="child">16</option>
+                        <option value="child">17</option>
+                        <option value="child">18</option>
+                        <option value="child">19</option>
+                        <option value="child">20</option>
+                        <option value="child">21</option>
+                        <option value="child">22</option>
+                        <option value="child">23</option>
+                        <option value="child">24</option>
+                        <option value="child">25</option>
+                        <option value="child">26</option>
+                        <option value="child">27</option>
+                        <option value="child">28</option>
+                        <option value="child">29</option>
+                        <option value="child">30</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="infant">Infant</label><br>
+                    <select name="infant">
+                        <option selected="infant" value="infant">0</option>
+                        <option value="infant">1</option>
+                        <option value="infant">2</option>
+                        <option value="infant">3</option>
+                        <option value="infant">4</option>
+                        <option value="infant">5</option>
+                        <option value="infant">6</option>
+                        <option value="infant">7</option>
+                        <option value="infant">8</option>
+                        <option value="infant">9</option>
+                        <option value="infant">10</option>
+                        <option value="infant">11</option>
+                        <option value="infant">12</option>
+                        <option value="infant">13</option>
+                        <option value="infant">14</option>
+                        <option value="infant">15</option>
+                        <option value="infant">16</option>
+                        <option value="infant">17</option>
+                        <option value="infant">18</option>
+                        <option value="infant">19</option>
+                        <option value="infant">20</option>
+                        <option value="infant">21</option>
+                        <option value="infant">22</option>
+                        <option value="infant">23</option>
+                        <option value="infant">24</option>
+                        <option value="infant">25</option>
+                        <option value="infant">26</option>
+                        <option value="infant">27</option>
+                        <option value="infant">28</option>
+                        <option value="infant">29</option>
+                        <option value="infant">30</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="currency">Currency</label><br>
+                    <select name="currency">
+                        <option selected="currency" value="currency">THB</option>
+                        <option value="currency">USD</option>
+                        <option value="currency">EUR</option>
+                        <option value="currency">AUD</option>
+                        <option value="currency">JPY</option>
+                    </select>
+                </td>
+            </tr>
+                  <td colspan="4" bgcolor="#F5F5F5">
+                        <input type="submit" value="Search">
+                    </td>
+        </table>
+    </form>
+</body>
+
+</html>

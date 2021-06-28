@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML CSS JS</title>
+    <style>
+        .box1, .box2, .box3 {
+  width: 200px;
+  height: 200px;
+  /* background: url("https://picsum.photos/id/1/100"); */
+  /* background: url("https://picsum.photos/id/1/100?grayscale"); */
+  /* background: url("https://picsum.photos/id/1/100?blur=1"); */
+  /* background: url("https://picsum.photos/id/1/100?blur=1&grayscale"); */
+  /* background-size: cover; */
+  /*coverคือคำสั่งให้ภาพพอดีหน้าจอ*/
+  background-repeat: no-repeat;
+  /* background-position: 100px 0; */
+  background-position: top center;
+  border: 1px dashed lime;
+  background: red;
+  color: white;
+  font-size: 55px;
+  text-align: center;
+}
+.box1 {
+  background: red;
+  z-index: 1;
+}
+.box2 {
+  position: absolute;
+  background: green;
+  top: 100;
+  left: 100px;
+  z-index:2;
+}
+.box3 {
+  position: absolute;
+  background: blue;
+  top: 160;
+  left: 40;
+  z-index:-1;
+}
+    </style>
+</head>
+<body>
+  <div class="box1">
+    box1
+  </div>
+    <div class="box2">
+    box2
+  </div>
+    <div class="box3">
+    box3
+  </div>
+</body>
+</html>

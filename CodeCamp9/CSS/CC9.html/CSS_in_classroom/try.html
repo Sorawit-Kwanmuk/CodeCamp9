@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+<!-- placeholder ตัวอักษรจางๆ -->
+<form action="/action_page.php">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="Email"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+  <button>OK</button>
+  <!-- buttonไม่ควรใช้ส่งข้อมูล จะส่งข้อมูลควรใช้ type="submit
+    form คือการส่งข้อมูลทั้งหมดที่อยู่ภายใต้tag form โดยใช้submit
+    " -->
+</form> 
+<form>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br>
+    <input type="radio" id="other" name="gender" value="other">
+    <label for="other">Other</label>
+  </form> 
+  <!-- id ใช้กับ for 
+        name กับ value ใช้ส่งข้อมูลไปที่ servers
+        label สามารถกดที่ตัวอักษรเพื่อเลือกได้
+ -->
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+</body>
+</html>

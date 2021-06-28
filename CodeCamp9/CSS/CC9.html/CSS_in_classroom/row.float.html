@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML CSS JS</title>
+<style>
+    .box {
+  float: left;
+  width: 200px;
+  height: 100;
+  background: red;
+  text-align: center;
+  margin:4px;
+}
+.logo {
+  float: left;
+  background:lime;
+}
+nav {
+    float: right;
+    background:skyblue;
+}
+.row {
+  border: 1px dashed;
+ overflow: hidden;
+ /* เลือกใช้overflow:hiddenหรือrow::afterเพื่อเครียไม่ใช้containerอีกอันมาแทรก */
+}
+.row::after {
+  content:"";
+  clear:both;
+  display: table;
+  
+}
+.main {
+  background: silver;
+  width:70%;
+  float:left
+}
+.sidebar {
+  background:salmon;
+  width:30%;
+  float:left
+}
+.picture1 {
+    width:50%;
+  float:left;
+    background: blue;
+  text-align:center
+    
+}
+.picture2 {
+   width:50%;
+  float:left;
+    background:lightblue;
+  text-align:center;
+}
+img {
+  width:60%
+}
+</style>
+</head>
+<body>
+  <div class="row">
+<div class="box">
+  <h1>HTML</h1>
+  <p>Well come to HTML-CSS-JS.com</p>
+</div>
+
+<div class="box">
+  <h1>HTML</h1>
+  <p>Well come to HTML-CSS-JS.com</p>
+</div>
+  <div class="box">
+  <h1>HTML</h1>
+  <p>Well come to HTML-CSS-JS.com</p>
+</div>
+</div>
+<div class="row">
+  <div class="logo">LOGO</div>
+  <nav>--------------NAVBAR---------------</nav>
+</div>
+  <div class="row">
+    <div class="main">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe recusandae minus a error eius rem mollitia impedit illum aspernatur suscipit distinctio consequuntur aperiam sit nesciunt perferendis pariatur temporibus nulla ad.</p>
+    </div>
+    <div class="sidebar">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga maxime ipsum placeat libero at quia consequatur asperiores facere distinctio accusantium cum ad sunt aspernatur magni quisquam perferendis eius dolores labore.
+    </div>sidebar
+  </div>
+   <div class="row">
+     <div class="picture1">
+       <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+     </div>
+     <div class="picture2">
+       <img src="https://picsum.photos/seed/picsum/200/300" alt="">
+     </div>
+   </div>
+</body>
+</html>

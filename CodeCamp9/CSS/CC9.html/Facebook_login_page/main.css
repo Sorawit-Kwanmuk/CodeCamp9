@@ -1,0 +1,258 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(240, 242, 245);
+    width: auto;
+    padding: 0;
+    margin: 0;
+
+}
+
+section {
+    margin: 0;
+
+}
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+body {
+    margin: 0;
+    /* max-width: 1400px; */
+    margin: auto;
+    height: auto;
+
+
+}
+
+.boxes {
+    margin-top: 10%;
+    height: auto;
+    /* max-width: 1400px; */
+    align-items: center;
+    margin-left: 10%;
+
+
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.facebook_left {
+    font-size: 50px;
+}
+
+.facebook_left p {
+    font-size: 28px;
+    margin-top: -20px;
+    margin-left: 60px;
+}
+
+.facebook_left {
+    float: left;
+    width: 50%;
+    align-items: center;
+}
+
+.facebook_left img {
+    margin-left: 35px;
+    margin-top: -2px;
+    width: 330px;
+}
+
+::placeholder {
+    color: rgb(144, 148, 156);
+}
+
+.facebook_right {
+    align-items: center;
+    text-align: center;
+    float: right;
+    margin: auto;
+    margin-right: 5px;
+
+
+}
+
+.form-box {
+    width: 400px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 1px rgba(71, 71, 71, 0.5);
+    margin-top: 5px;
+
+}
+
+.form-box input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid #eeebeb;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-box input:focus {
+    box-shadow: 0px 0px 1px 1px rgb(22, 111, 229);
+}
+
+.form-box a {
+    color: #1670e5ef;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+.form-box hr {
+    border: 1px solid #dadde1;
+    margin-bottom: 15px;
+}
+
+.form-box .button_1 {
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+    background: #1977f2;
+}
+
+.form-box .button_1:hover {
+    background: #1567d1;
+}
+
+.form-box .button_2 {
+    padding: 15px 20px;
+    background: rgb(66, 183, 42);
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 230px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+
+}
+
+.form-box .button_2:hover {
+    background: #20a505;
+}
+
+.facebook_right p {
+    font-size: 14px;
+    margin-bottom: 200px;
+}
+
+.facebook_right .create_a_page {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.facebook_right .create_a_page:hover {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
+
+.boxes_2 {
+    background-color: rgb(255, 255, 255);
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+
+
+}
+
+.container_2 {
+    /* width: 1400px; */
+    margin-left: -400px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+
+.boxes_2 button {
+    width: 30px;
+    height: 25px;
+}
+
+.container_2 a {
+    font-size: 12px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: rgb(56, 88, 152);
+}
+
+.container_2 a:hover {
+    font-size: 12px;
+    padding-right: 5px;
+    text-decoration: underline;
+    color: rgb(56, 88, 152);
+}
+
+.option a:hover {
+    font-size: 12px;
+    padding-right: 13px;
+    text-decoration: underline;
+    color: rgb(56, 88, 152);
+}
+
+span {
+    content: "\002B";
+    font-weight: 300;
+    font-size: 20px;
+    color: rgb(90, 90, 90);
+
+
+
+}
+
+.boxes_2 hr {
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.container_2 p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 10px;
+    color: gray;
+}
+
+.option a {
+    padding-right: 13px;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    /* min-width: 1200px; */
+    margin-bottom: 0%;
+    align-items: center;
+}
