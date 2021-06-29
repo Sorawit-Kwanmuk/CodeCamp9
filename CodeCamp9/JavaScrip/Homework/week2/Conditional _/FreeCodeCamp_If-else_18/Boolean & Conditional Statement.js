@@ -62,7 +62,7 @@
 //     return "Equal";
 //   }
 
-//   testNotEqual(10);+
+//   testNotEqual(10);
 // 5.Comparison with the Strict Inequality Operator
 // Setup
 // function testStrictNotEqual(val) {
