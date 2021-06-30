@@ -130,4 +130,50 @@
 //   sum += +item;
 // }
 // console.log(sum);
+
 // LAB5
+
+// const arr = [2, 3, 5, 7, 11];
+// function squareArr(array) {
+//   const newArr = [];
+//   for (let i = 0; i < array.length; i++) {
+//     newArr[i] = array[i] ** 2;
+//   }
+//   return newArr;
+// }
+// const newArray = squareArr(arr);
+// console.log(newArray);
+
+// LAB6
+// const sales = [
+//   { price: 1000, discount: 0.1 },
+//   { price: 500, discount: 0.05 },
+//   { price: 100 },
+// ];
+// function calcPrice(sales) {
+//   let summary2 = [];
+//   for (let i = 0; i < sales.length; i++) {
+
+//     let netPrice;
+//     if (sales[i].discount /*=== undefined*/) {
+//       //ไม่้ตองใส่ก็ได้ เพราะเมื่อแปลงค่าundefine เป็น booleen มันจะได้เป็น false
+//       netPrice = sales[i].price * (1 - sales[i].discount);
+//     } else {
+//       netPrice = sales[i].price;
+//     }
+//     summary2[i] = { netPrice: netPrice };
+//   }
+//   return summary2;
+// }
+// const summary = calcPrice(sales);
+// console.log(summary);
+
+// function calcPrice(sales) {
+//   let summary2 = [];
+//   for (let i = 0; i < sales.length; i++) {
+// summary2[i] = {netPrice : sales[i].discount ? sales[i].price*(1-sales[i].discount) : sales[i].price}
+//   }
+// return summary2;
+// }
+// const summary = calcPrice(sales);
+// console.log(summary);

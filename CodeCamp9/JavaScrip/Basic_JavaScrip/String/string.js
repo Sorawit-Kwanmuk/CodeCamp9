@@ -21,7 +21,11 @@
 // LAB4
 // let message = prompt("Input message");
 // function search(message) {
-//   if (message.toLowerCase().includes("xxx")) {
+//   if (
+//     message.toLowerCase().includes("xxx") ||
+//     message.toLowerCase().includes("sex") ||
+//     message.toLowerCase().includes("porn")
+//   ) {
 //     return true;
 //   }
 //   if (message.toLowerCase().includes("sex")) {
@@ -51,4 +55,11 @@
 
 // LAB6
 // const money = prompt("Input money");
-// function extractCurrencyValue(string, rate) {}
+
+// function extractCurrencyValue(string, rate) {
+//   let currency = string.slice(1);
+//   return (currency *= rate);
+// }
+
+// const bath = extractCurrencyValue("$120", 30);
+// console.log(`THB ${bath}`);
