@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HTML CSS JS</title>
+</head>
+<style>
+    .container {
+        height: 100vh;
+        display: flex;
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+
+        /* flex-direction: row; */
+
+        /* justify-content: flex-end; */
+        /* justify-content: flex-start; */
+
+        /* justify-content: center; */
+        /* justify-content: space-between; */
+        justify-content: space-evenly;
+
+
+
+        /* align-items:center; */
+        /* align-items: flex-end; */
+        align-items: flex-start;
+
+        /* align-items: stretch; */
+        /*จองพื้นที่เป็นแนวตั้ง*/
+
+        background: deeppink;
+        /* flex-wrap: wrap; */
+        /*ใช้ทำ facebook login-form*/
+        /* flex-wrap: nowrap; */
+        /* flex-wrap: wrap-reverse; */
+        /* align-content: flex-start; */
+        flex-flow: colum wrap;
+    }
+
+    .container>* {
+        color: white;
+        margin: 0;
+        background: lime;
+        margin: 5px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 id="welcome">HTML CSS JS</h1>
+        <h2>Codecamp9</h2>
+        <h2>Front-End / Back-end</h2>
+    </div>
+
+</body>
+
+</html>
