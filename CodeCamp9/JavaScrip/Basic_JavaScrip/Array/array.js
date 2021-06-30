@@ -112,22 +112,22 @@
 // console.log(styles);
 
 // LAB4.4
-const arr = [];
-let i = 0;
-while (1) {
-  let num = prompt("Input number");
-  if (isNaN(+num) || num === null || num === "") {
-    console.log("s");
-    break;
-  }
-  item = num;
-  arr[i] = item;
-  i++;
-  console.log(arr);
-}
-let sum = 0;
-for (let item of arr) {
-  sum += +item;
-}
-console.log(sum);
+// const arr = [];
+// let i = 0;
+// while (1) {
+//   let num = prompt("Input number");
+//   if (isNaN(+num) || num === null || num === "") {
+//     console.log("s");
+//     break;
+//   }
+//   item = num;
+//   arr[i] = item;
+//   i++;
+//   console.log(arr);
+// }
+// let sum = 0;
+// for (let item of arr) {
+//   sum += +item;
+// }
+// console.log(sum);
 // LAB5
