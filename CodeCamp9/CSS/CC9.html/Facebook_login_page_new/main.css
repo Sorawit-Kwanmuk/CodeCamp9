@@ -1,0 +1,225 @@
+.container {
+    outline: 1px dashed red;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+html {
+    font-family: 'Poppins', sans-serif;
+
+    line-height: 1.5;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+    margin: 0;
+    background-color: rgb(240, 242, 245);
+    margin: auto;
+}
+
+.boxes {
+    min-height: 600px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: red;
+    flex-wrap: wrap;
+}
+
+.container>div {}
+
+.facebook_left .container {
+    min-height: 600px;
+
+    justify-content: center;
+}
+
+.facebook_left p {
+    color: black;
+    font-size: 24px;
+}
+
+.facebook_right .container {
+    min-height: 1400px;
+}
+
+.form-box {
+    width: 400px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px 1px rgba(71, 71, 71, 0.5);
+    margin-top: 5px;
+
+}
+
+.form-box input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid #eeebeb;
+    border-radius: 5px;
+    outline: none;
+}
+
+.form-box input:focus {
+    box-shadow: 0px 0px 1px 1px rgb(22, 111, 229);
+}
+
+.form-box a {
+    color: #1670e5ef;
+    font-size: 14px;
+    text-decoration: none;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.form-box a:hover {
+    text-decoration: underline;
+}
+
+.form-box hr {
+    border: 1px solid #dadde1;
+    margin-bottom: 15px;
+}
+
+.form-box .button_1 {
+    width: 100%;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+    background: #1977f2;
+}
+
+.form-box .button_1:hover {
+    background: #1567d1;
+}
+
+.form-box .button_2 {
+    padding: 15px 20px;
+    background: rgb(66, 183, 42);
+    display: inline-block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 230px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+    border: none;
+    padding: 13px 0;
+    cursor: pointer;
+
+}
+
+.form-box .button_2:hover {
+    background: #20a505;
+}
+
+.boxes_2 .container a {
+    font-size: 12px;
+    padding-right: 5px;
+    text-decoration: none;
+    color: rgb(56, 88, 152);
+}
+
+.boxes_2 .container a:hover {
+    font-size: 12px;
+    padding-right: 5px;
+    text-decoration: underline;
+    color: rgb(56, 88, 152);
+}
+
+.option a:hover {
+    padding-right: 13px;
+    padding-right: 13px;
+    text-decoration: underline;
+    color: gray;
+}
+
+
+span {
+    content: "\002B";
+    font-weight: 300;
+    font-size: 20px;
+    color: rgb(90, 90, 90);
+}
+
+.facebook_right p {
+    font-size: 14px;
+    margin-bottom: 200px;
+}
+
+.facebook_right .create_a_page {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.facebook_right .create_a_page:hover {
+    font-weight: bold;
+    color: black;
+    text-decoration: underline;
+}
+
+.boxes_2 hr {
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+
+.container .option {
+    justify-content: flex-start;
+
+}
+
+.boxes_2 .container {
+    /* align-items: flex-start; */
+    justify-content: flex-start;
+}
+
+.boxes_2 .container a,
+p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 13px;
+    color: gray;
+}
+
+.option a {
+    padding-right: 13px;
+}
+
+footer {
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 0%;
+    justify-content: flex-start;
+
+}
