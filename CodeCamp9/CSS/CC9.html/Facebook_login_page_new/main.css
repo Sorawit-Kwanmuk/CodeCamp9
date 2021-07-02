@@ -1,15 +1,22 @@
-.container {
-    outline: 1px dashed red;
-}
+/* .container {
+    /* outline: 1px dashed red; 
+} */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
 html {
     font-family: 'Poppins', sans-serif;
+    /* height: auto; */
 
-    line-height: 1.5;
+    /* line-height: 1.5; */
+
 
 }
+
+/* body {
+    height: 1300px;
+} */
+
 
 h1,
 h2,
@@ -21,41 +28,71 @@ body {
     margin: 0;
     background-color: rgb(240, 242, 245);
     margin: auto;
+
 }
 
-.boxes {
-    min-height: 600px;
-}
+
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
     border: red;
-    flex-wrap: wrap;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
-.container>div {}
+.facebook_right {
+    /* margin: 0; */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.facebook_right .container {
+    flex-wrap: wrap;
+    min-width: 450px;
+    /* max-width: 400px; */
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+
+}
+
+.facebook_left {
+    margin: 0;
+}
 
 .facebook_left .container {
-    min-height: 600px;
+    /* flex-wrap: wrap; */
+    min-width: 400px;
+    margin: 0;
+    /* justify-content: left;
+    align-items: center; */
+}
 
-    justify-content: center;
+.facebook_left h1 {
+    color: rgb(24, 119, 242);
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 0;
+    clear: both;
+    overflow: auto;
 }
 
 .facebook_left p {
     color: black;
-    font-size: 24px;
+    font-size: inherit;
+    font-size: 25px;
+    font-weight: 500;
 }
 
-.facebook_right .container {
-    min-height: 1400px;
-}
+
 
 .form-box {
+    /* max-width: 400px; */
     width: 400px;
     padding: 15px;
     text-align: center;
@@ -63,6 +100,7 @@ body {
     background-color: #fff;
     box-shadow: 0px 2px 5px 1px rgba(71, 71, 71, 0.5);
     margin-top: 5px;
+    min-width: 350px;
 
 }
 
@@ -153,8 +191,7 @@ body {
 }
 
 .option a:hover {
-    padding-right: 13px;
-    padding-right: 13px;
+
     text-decoration: underline;
     color: gray;
 }
@@ -169,8 +206,10 @@ span {
 
 .facebook_right p {
     font-size: 14px;
-    margin-bottom: 200px;
+    padding-top: 25px;
+    align-items: center;
 }
+
 
 .facebook_right .create_a_page {
     font-weight: bold;
@@ -195,20 +234,22 @@ span {
 
 .container .option {
     justify-content: flex-start;
+    text-align: left;
 
 }
 
 .boxes_2 .container {
     /* align-items: flex-start; */
     justify-content: flex-start;
+    flex-wrap: wrap;
+    font-size: 16px;
+
 }
 
 .boxes_2 .container a,
 p {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 13px;
     color: gray;
+    margin: 0;
 }
 
 .option a {
@@ -221,5 +262,37 @@ footer {
     padding: 0px;
     margin-bottom: 0%;
     justify-content: flex-start;
+
+}
+
+@media(max-width: 1100px) {
+    .boxes .container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 450px;
+
+    }
+
+    /* body {
+        min-width: 450px;
+    } */
+
+    .facebook_right .container {
+        margin-bottom: 100px;
+        /* margin-top: 100px; */
+    }
+
+    .facebook_left .container {
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .facebook_left .container p,
+    h1 {
+        text-align: center;
+    }
 
 }
