@@ -2,7 +2,7 @@
     /* outline: 1px dashed red; 
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap'); */
 
 html {
     font-family: 'Poppins', sans-serif;
@@ -34,14 +34,14 @@ body {
 
 
 .container {
-    width: 80%;
+    width: 70%;
     margin: auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     border: red;
     margin-top: 100px;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 .facebook_right {
@@ -262,6 +262,7 @@ footer {
     padding: 0px;
     margin-bottom: 0%;
     justify-content: flex-start;
+    margin-top: 200px;
 
 }
 
