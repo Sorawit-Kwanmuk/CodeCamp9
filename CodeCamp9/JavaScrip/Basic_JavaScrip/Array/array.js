@@ -93,13 +93,21 @@
 
 // LAB 4.1
 // const arr = ["Boon", "Earth", "Team", "May", "Toon"];
+// เฉลย
+// const friends = ["Boon", "Earth", "Team", "May", "Toon"];
+// const friends = new Array("Boon", "Earth", "Team", "May", "Toon");//เลือกเอาสร้างได้เหมือนกัน
 
 // LAB 4.2
 // const arr = [1, 2, 4];
 // const newArr = arr;
-
 // arr[0] = 3;
 // console.log(newArr[0]); // *3 เพราะ arr[0] = 3; อัพเดทค่าarrayเป็น3แล้ว
+
+// เฉลย
+// const arr = [1, 2, 4];
+// const newArr = arr;
+// arr[0] = 3;
+// console.log(newArr[0]); // *แก้ตัว1กระทบหมด
 
 // LAB 4.3
 // const styles = ["Jazz", "Blues"];
@@ -110,8 +118,16 @@
 // delete styles[0];
 // console.log(styles.length);
 // console.log(styles);
+// เฉลย
+// styles = ["Jazz", "Blues"];
+// // styles[2] = "Rock-n-Roll";
+// styles[styles.length] = "Rock-n-Roll"; //เพิ่มที่ตำแหน่งสุดท้ายของ array
+// styles[1] = "Classic";
+// delete styles[0];
+// console.log(styles);
+// console.log(styles.length);
 
-// LAB4.4
+// LAB 4.4
 // const arr = [];
 // let i = 0;
 // while (1) {
@@ -130,8 +146,20 @@
 //   sum += +item;
 // }
 // console.log(sum);
+// เฉลย
+// let arr = [];
+// while (1) {
+//   let num = prompt("Enter number");
+//   //   if (!num /*empty string , null ,( 0 , nan ,undefine แต่สิ่งที่ได้จากpromp ไม่ได้เป็น3ตัวนี้)*/|| num.trim()/*เป็น null จากการกด esc หรือ cancel*/ || isNaN(num)) break;
+//   if (num === null || num === "" || num.trim() === "" || isNaN(num)) break;
+//   arr[arr.length] = +num;
+// }
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
 
-// LAB5
+// LAB 4.5
 
 // const arr = [2, 3, 5, 7, 11];
 // function squareArr(array) {
@@ -144,6 +172,16 @@
 // const newArray = squareArr(arr);
 // console.log(newArray);
 
+// เฉลย
+// const arr = [2, 3, 5, 7, 11];
+// squareArr(arr); // [4, 9, 25, 49, 121]
+// function aquareArr(arr) {
+//   let result = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     result[i] = arr[i] ** 2;
+//   }
+//   return result;
+// }
 // LAB6
 // const sales = [
 //   { price: 1000, discount: 0.1 },
@@ -177,3 +215,28 @@
 // }
 // const summary = calcPrice(sales);
 // console.log(summary);
+
+// เฉลย
+// const sales = [
+//   { price: 1000, discount: 0.1 },
+//   { price: 500, discount: 0.05 },
+//   { price: 100 },
+// ];
+// const summary = [];
+// for (let i = 0; i < sales.length; i++) {
+//   /*วิธีที่1*/
+//   let netPrice =
+//     sales[i].price * (1 - (sales[i].discount ? sales[i].discount : 0));
+//   /*วิธี if*/
+//   //   let netPrice = 0;
+//   //   if (sales[i].discount) {
+//   //     netPrice = sales[i].price * (1 - sales[i].discount);
+//   //   } else {
+//   //     netPrice = sales[i].price;
+//   //   }
+//   // /*วิธีที่3*/
+//   // let netPrice = sales[i].price*(1-salse[i].discount ?? 0)
+//   // /*วิธีที่4*/
+//   // let netPrice = sales[i].price*(1-salse[i].discount || 0)
+//   summary[i] = { netPrice };
+// }

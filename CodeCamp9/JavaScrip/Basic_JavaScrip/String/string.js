@@ -1,24 +1,32 @@
-// // LAB1
+// // LAB 3.1
 // let message = `c:\\Users\\Admin\\Desktop`;
 // console.log(message);
 
-// LAB2
+// LAB 3.2
 // let message1 = "Welcome to Thailand";
 // let message2 = "Don'n be afraid\n";
 // let message3 = "สวัสดีประเทศไทย";
 
-// console.log(message1.length);
-// console.log(message2.length);
-// console.log(message3.length);
+// console.log(message1.length);//19
+// console.log(message2.length);//16
+// console.log(message3.length);//15
 
-// LAB3
+// LAB 3.3
 // let str = prompt("Input message");
 // function ucFirst(str) {
 //   console.log(str.slice(0, 1).toUpperCase(1) + str.slice(1, Infinity));
 // }
 // ucFirst(str);
-
-// LAB4
+// เฉลย
+// function ucFirst(str) {
+//   if (
+//     !str /*เช็ค empty string เช็ค null เช็ค nan เช็ค undefine แช่ไม่ได้เช็ค white space*/
+//   )
+//     return str;
+//   return str[0].toUpperCase() + str.slice(1);
+// }
+// console.log(ucFirst("sDoa"));
+// LAB 3.4
 // let message = prompt("Input message");
 // function search(message) {
 //   if (
@@ -38,8 +46,17 @@
 // }
 
 // console.log(search(message));
-
-// LAB5
+// เฉลย
+// function checkSpam(str) {
+//   if (!str) return str;
+//   return (
+//     str.toLoverCase().includes("xxx") ||
+//     str.toLoverCase().includes("sex") ||
+//     str.toLoverCase().includes("porn")
+//   );
+// }
+// console.log(checkSpam('xxxxxx');
+// LAB 3.5
 // let message = prompt("Input message");
 // n = message.length;
 // function truncate(message) {
@@ -52,8 +69,15 @@
 // }
 // truncate(message);
 // console.log(truncate(message));
+// เฉลย
+// function truncate(str, length) {
+//   if (!str) return str;
+//   if (str.length < length) return str;
+//   return str.slice(0, length - 1) + "...";
+// }
+// console.log(truncate("'What I'd like to tell on this topic is:'"));
 
-// LAB6
+// LAB 3.6
 // const money = prompt("Input money");
 
 // function extractCurrencyValue(string, rate) {
@@ -63,3 +87,10 @@
 
 // const bath = extractCurrencyValue("$120", 30);
 // console.log(`THB ${bath}`);
+
+// เฉลย
+// function extractCurrencyValue(str, rate) {
+//   if (!str) return str;
+//   return str.slice(1) * rate;
+// }
+// console.log(extractCurrencyValue("$120", 30));
