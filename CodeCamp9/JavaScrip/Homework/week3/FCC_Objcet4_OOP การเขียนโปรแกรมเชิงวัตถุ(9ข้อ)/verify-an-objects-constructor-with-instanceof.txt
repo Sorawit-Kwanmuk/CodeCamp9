@@ -1,0 +1,6 @@
+let House = function (numBedrooms) {
+  this.numBedrooms = numBedrooms;
+}
+const myHouse = new House(4);
+myHouse instanceof House
+// Only change code below this line
