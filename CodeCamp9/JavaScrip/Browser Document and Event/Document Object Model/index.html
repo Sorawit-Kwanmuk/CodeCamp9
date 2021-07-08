@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Document Object Model.js">
+</head>
+
+<body>
+
+    <script>
+        // LAB1
+        // let div1 = document.createElement("div");
+        // div1.textContent = "User:";
+        // console.log(div1);
+        // let ul1 = document.createElement("ul");
+        // ul1.appendChild(document.createElement('li')).textContent = 'John';
+        // ul1.appendChild(document.createElement('li')).textContent = 'Pete';
+        // console.log(ul1);
+        // let element = document.get
+        // LAB2
+        const mainBody = document.querySelector("body");
+        let div2 = document.createElement("div")
+        let newH2 = document.createElement("h2");
+        newH2.classList.add("title-1");
+        newH2.textContent = "List of companies";
+        let ul1 = document.createElement("ul");
+        ul1.appendChild(newH2)
+        mainBody.appendChild(div2);
+        div2.appendChild(newH2);
+        console.log(mainBody);
+    </script>
+</body>
+
+</html>
