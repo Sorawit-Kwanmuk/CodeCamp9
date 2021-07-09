@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 3.2</title>
+</head>
+
+<body>
+    <ul>
+        <li>Cows</li>
+        <li>Donkeys</li>
+        <li>Dogs</li>
+        <li>Tigers</li>
+    </ul>
+    <script>
+        const ul = document.createElement('ul'); //สร้างขึ้นมาเฉยๆยังไม่ได้เอาไปใส่
+        const body = document.body;
+        body.append(ul); //นำไปแสดงต่อท้าย prepend คือเอาไปต่อด้านบนคือใส่เป็นfirstChild ของbody appen คือ last child
+        while (1) {
+            const text = prompt('Enter text');
+            if (!text /*กดcancelได้เป็น null หรือกดส่งเป็นemtry string*/ || !text.trim() /*space bar*/ ) break;
+            const li = document.createElement('li');
+            li.innerHTML = text;
+            ul.append(li);
+        };
+    </script>
+</body>
+
+</html>

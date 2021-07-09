@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.5</title>
+</head>
+
+<body>
+    <div>
+        <label for="">Nickname</label>
+        <input type="text" name="nickname">
+    </div>
+    <div>
+        <label for="">Job</label>
+        <input type="text" name="job">
+    </div>
+    <script>
+        const nickname = document.querySelector('[name="nickname"]');
+        const job = document.querySelector('[name="job"]');
+        nickname.addEventListener('click', function (e) {
+            console.log(e.target.name);
+        });
+        job.addEventListener('click', function (e) {
+            console.log(this.name);
+        });
+        nickname.addEventListener('input', function () {
+            console.log(this.value);
+        })
+        job.addEventListener('input', e => console.log(e.target.value)); //()=> ไม่สามารถใช้this 
+    </script>
+</body>
+
+</html>

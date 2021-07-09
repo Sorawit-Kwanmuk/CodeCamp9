@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.4</title>
+</head>
+
+<body>
+    <a href="https://www.google.co.th/">Google</a>
+    <script>
+        const aTag = document.querySelector('a');
+        aTag.addEventListener('click', function (e) {
+            e.preventDefault();
+            const isConfirm = confirm('Leave for www.google.co.th');
+            if (isConfirm) {
+                location.href = 'https://www.google.co.th/';
+                // location.assign('https://www.google.co.th/');
+                // location.replace('https://www.google.co.th/');//กดไปแล้วไม่สามารถกดกลับมาได้
+            }
+        })
+    </script>
+</body>
+
+</html>

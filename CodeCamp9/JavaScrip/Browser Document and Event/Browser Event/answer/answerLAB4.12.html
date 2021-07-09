@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.12</title>
+    <style>
+        button {
+            margin-left: 0.5rem;
+        }
+
+        ul {
+            padding: 0;
+            margin: 1rem 0;
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        span {
+            display: inline-block;
+            width: 50%;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="" id="">
+    <button class="btn-add">Add</button>
+    <button class="btn-save hide">Save</button>
+    <ul>
+        <!-- <li><span>Tsk 1</span><button>Edit</button><button>Del</button></li> -->
+    </ul>
+    <script>
+        function createElement(tag, innerHTML, className) {
+            const ele = document.createElement(tag);
+            if (className /*ถ้าclassNameมันมีค่า*/ ) ele.className = className;
+            if (innerHTML) ele.innerHTML = innerHTML;
+            return ele;
+        }
+        const btnAdd = document.querySelector('.btn-add');
+        const btnSave = document.querySelector('.btn-save');
+        const input = document.querySelector('input');
+        const ul = document.querySelector('ul')
+        btnAdd.addEventListener('click', function () {
+            const li = createElement('li');
+            const span = createElement('span', input.value);
+            const btnEdit = createElement('button', 'Edit');
+            const btnDel = createElement('button', 'Del');
+
+            btnEdit.addEventListener('click', function () {
+                input.value = this.previousElementSibling /*ตัวที่อยู่ก่อนหน้าในขั้นเดียวกัน*/
+                    .innerHTML;
+                btnAdd.classList.toggle('hide');
+                btnSave.classList.toggle('hide');
+                const currentSpan = this.previousElementSibling;
+                btnSave.onclick = function () {
+                    currentSpan.innerHTML = input.value;
+                    btnAdd.classList.toggle('hide');
+                    btnSave.classList.toggle('hide');
+                    input.value = '';
+                };
+            });
+            btnDel.addEventListener('click', function () {
+                this.parentElement /*เลือกตัวแม่ของthis*/ .remove();
+                this.closest /*เริ่มหาจากตัวมันหรือก็คือตัวลูกไปหาตัวแม่ขึ้นด้านบน*/('li')
+            });
+
+            li.append(span);
+            li.append(btnEdit);
+            li.append(btnDel);
+
+            ul.append(li)
+
+            input.value = '';
+        })
+    </script>
+</body>
+
+</html>

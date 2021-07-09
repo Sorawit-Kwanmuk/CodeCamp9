@@ -28,18 +28,18 @@
 // let input1 = document.querySelector("#input1");
 // let input2 = document.querySelector("#input2");
 
-// input1.addEventListener("focus", onFocus);
+// input1.addEventListener("click", onClick);
 // input1.addEventListener("input", onInput);
-// input2.addEventListener("focus", onFocus2);
+// input2.addEventListener("click", onClick2);
 // input2.addEventListener("input", onInput2);
 
-// function onFocus() {
+// function onClick() {
 //   return console.log(input1.name);
 // }
 // function onInput() {
 //   return console.log(input1.value);
 // }
-// function onFocus2() {
+// function onClick2() {
 //   return console.log(input2.name);
 // }
 // function onInput2() {

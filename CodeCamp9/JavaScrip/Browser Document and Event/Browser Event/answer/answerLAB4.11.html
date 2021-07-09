@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.11</title>
+    <style>
+        body {
+            padding: 3rem;
+        }
+
+        button {
+            margin-right: 1rem;
+        }
+
+        span {
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<button class="btn-add">+</button>
+<span class="count">0</span>
+<button class="btn-subtract">-</button>
+<button class="btn-reset">Reset</button>
+
+<body>
+
+    <script>
+        const btnAdd = document.querySelector('.btn-add');
+        const count = document.querySelector('.count');
+        const btnSubtract = document.querySelector('.btn-subtract');
+        const btnReset = document.querySelector('.btn-reset');
+        btnAdd.addEventListener('click', function () {
+            count.innerHTML = +count.innerHTML + 1;
+        });
+        btnSubtract.addEventListener('click', function () {
+            if (count.innerHTML !== '0') count.innerHTML = +count.innerHTML - 1;
+        })
+        btnReset.addEventListener('click', function () {
+            count.innerHTML = 0;
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.8</title>
+</head>
+
+<body>
+    <button>Hide</button>
+    <p>Lorem, ipsum dolor.</p>
+
+    <script>
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function () {
+            const pTag = document.querySelector('p');
+            if (btn.innerHTML === 'Hide') {
+                pTag.style.display = 'none';
+                btn.innerHTML = 'Show'
+            } else {
+                pTag.style.display = '';
+                btn.innerHTML = 'Hide'
+            }
+        })
+    </script>
+</body>
+
+</html>

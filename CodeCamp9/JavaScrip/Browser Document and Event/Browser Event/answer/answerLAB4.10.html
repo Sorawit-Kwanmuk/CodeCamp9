@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.10</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <label for="province">Province</label>
+        <select name="province" id="province">
+            <option value="">SELECT</option>
+            <option value="BANGKOK">BANGKOK</option>
+            <option value="PHUKET">PHUKET</option>
+            <option value="RANONG">RANONG</option>
+        </select>
+    </div>
+    <div>
+        <label for="district">Districk</label>
+        <select name="district" id="district">
+            <option value="">SELECT</option>
+        </select>
+    </div>
+    <script>
+        const provinces = [
+            'BANGKOK', 'PHUKET', 'RANPNG'
+        ]
+        const mapProDis = {
+            BANGKOK: [
+                'BANG BON',
+                'BANG KAPI',
+                'BANG KHAE'
+            ],
+            PHUKET: [
+                'MUEANG',
+                'KATHU',
+                'THALANG'
+            ],
+            RANONG: [
+                'MUEANG',
+                'KA POE',
+                'KRA BURI'
+            ]
+        };
+        const province = document.querySelector('#province');
+        province.addEventListener('change', function (e) {
+            const provinceSelected = province.value;
+            const districts = mapProDis[provinceSelected] || [];
+            const optDistricts = districts.map(item => `<option value="${item}">${item}</option>`);
+            const district = document.querySelector('#district');
+            district.innerHTML = '<option>SELECT</option>' + optDistricts.join('');
+        });
+    </script>
+</body>
+
+</html>

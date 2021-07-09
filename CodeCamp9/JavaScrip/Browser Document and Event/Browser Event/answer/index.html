@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 95%;
+        }
+
+        .container_top label {
+            margin: 0.5rem;
+            margin-top: 0.25rem;
+        }
+
+        .container_bottom button {
+            margin-top: 10px;
+            margin: 0.5rem;
+        }
+
+        form {
+            min-width: 300px;
+            width: auto;
+            border: 1px solid black;
+        }
+
+        .divTop {
+            margin-top: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            outline-color: black;
+            align-items: center;
+
+        }
+
+        .container_top {
+            width: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(209, 209, 209);
+
+        }
+
+        .container_bottom {
+            min-width: 300px;
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: right;
+            align-items: right;
+            text-align: right;
+
+            border: 1px solid black;
+            background-color: rgb(209, 209, 209);
+        }
+
+        .board {
+            min-width: 300px;
+            min-height: 100px;
+            background-color: lightgrey;
+            border: 1px solid black;
+        }
+
+        .divBottom {
+            height: auto;
+
+        }
+
+        .divBottom hr {
+            border-color: gray;
+        }
+
+        body {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container_top">
+            <form action="">
+                <div class="divTop">
+                    <label for="">Expense</label><br>
+                    <input class="inpurExpense" type="text">
+                </div>
+                <div class="divTop">
+                    <label class="inputAmount" for="">Amount</label><br>
+                    <input type="text">
+                </div>
+                <div class="divTop">
+                    <label class="inputDate" for="">Date</label><br>
+                    <input type="date">
+                </div>
+                <div class="divTop">
+                    <button class="buttonAdd">Add</button>
+                </div>
+            </form>
+        </div>
+        <div class="container_bottom">
+            <div class="divBottom">
+                <label for="">total: </label>
+                <label for="">0</label>
+                <hr>
+            </div>
+            <div class="board">
+
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 4.9</title>
+    <style>
+        .error {
+            color: red;
+            border-color: red;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input class="error" type="text" placeholder="Phone number">
+    <button>Check</button>
+    <p class="error"></p>
+    <script>
+        const btn = document.querySelector('button');
+        btn.addEventListener('click', function () {
+            const input = document.querySelector('input');
+            const pTag = document.querySelector('p');
+            const value = input.value;
+            if (!value) {
+                input.classList.toggle('error');
+                pTag.classList.toggle('hide');
+                pTag.innerHTML = 'Phone number is require';
+            } else if (isNaN(value.trim())) {
+                input.classList.toggle('error')
+                pTag.classList.toggle('hide');
+                pTag.innerHTML = 'Phone number is invalid';
+
+            } else if (value.length !== 10) {
+                input.classList.toggle('error')
+                pTag.classList.toggle('hide');
+                pTag.innerHTML = 'Invalid length';
+            } else {
+                alert('Valid phone number')
+            }
+        })
+    </script>
+</body>
+
+</html>

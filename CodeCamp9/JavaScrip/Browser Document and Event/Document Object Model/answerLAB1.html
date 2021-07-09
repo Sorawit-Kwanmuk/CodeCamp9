@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAB 2.1</title>
+</head>
+
+<body>
+
+    <div>Users:</div>
+    <ul>
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+
+
+    <script>
+        //access div
+        const div = document.querySelector('div')
+        const div2 = document.getElementsByTagName('div')[0]
+        const div3 = document.querySelectorAll('div')[0]
+        //access ul
+        const ul = document.querySelector('ul');
+        //access li ตัวแรก
+        const li1 = document.querySelector('li');
+        const li2 = document.querySelector('li:first-child');
+        const li3 = document.querySelectorAll('li')[0];
+        const li4 = document.getElementsByTagName('li')[0];
+        const li5 = ul.querySelector('li');
+        const li6 = ul.firstElementChild;
+        //access li ตัวที่2
+        const li2_1 = document.querySelector('li:last-child');
+        const li2_2 = document.querySelectorAll('li')[1];
+        const li2_3 = ul.lastElementChild;
+    </script>
+</body>
+
+</html>
