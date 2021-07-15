@@ -75,3 +75,9 @@
 - ` git head ~ 2` ย้อนกลับไป2commit ก่อนหน้า ใช้ gitcheckout กลับมาที่เดิม
 - ` git clone` copy clone html ตัวอย่าง git clone https://github.com/tratchapong/MyStopWatch.git
 - `code .` ในcmd ตรงโฟลเดอร์ที่ต้องการเปิด เพื่อเปิดโปรเจ็คในvscode
+- `git rm --cached -f index.html` เอาข้อมูลชุดใหม่ไม่เอาข้อมูลจาก git add ที่แล้ว
+- `git restore index.html` เอาไฟล์เวอร์ชั่นที่git addไปล่าสุด
+- `git rm -r --cached .` ลบข้อมูลที่ add ไปทั้งหมด
+- `git diff` จะบอกว่า ณ ปัจจุบัน กับตัวที่commit ไป มีอะไรเปลี่ยนแปลงบ้าง
+- `git diff index.htmk` ดูเฉพาะไฟล์
+- `git restore index.html` ย้อนข้อมูลไป commit ล่าสุด
