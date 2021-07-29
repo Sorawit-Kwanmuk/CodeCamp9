@@ -32,30 +32,39 @@
     </div> -->
     </div>
     <script type="text/babel">
-        function Greeting(props){
-            console.log(props);
-        return <div className="greeting">Hello {props.user?.name}. My email is {props.user?.email}</div>
-    }
-// function App(props){
-//     return <div>
-//         <Greeting name="John" user={{name: "Tom", email:{{email:'Tom@gmail.com'}}/>
-//         </div>
-// }
-    const user = {
-                name: "John",
-                email: "john@email.com"
-                
-            }
-     const element = (<div>
-        <h1>Welcome My Friend</h1>
-        <Greeting age="23" address="bangkok Thailand" user={user}/>
-        <Greeting name="Bill" age="23" address="bangkok Thailand" user={{email:'bill@gmail.com'}}/>
-        <Greeting name="Win" age="23" address="bangkok Thailand" user={{email:'win@gmail.com'}} />
-        {/*{Greeting({name:'John'})}
-        {Greeting({name:'Jack'})}
-     {Greeting({name:'Jane'})}*/}
-</div>)
-        ReactDOM.render(element, document.getElementById('root'))
+        function Greeting(props) {
+          // props.name = 'Jessie';
+          console.log(props);
+          return (
+            <div className="greeting">
+              Hello {props.name}. My email is {props.user?.email}
+            </div>
+          );
+        }
+  
+        const user = {
+          name: 'john',
+          email: 'john.d@gmail.com'
+        };
+  
+        function App(props) {
+          return (
+            <div>
+              <Greeting name="Tom" user={{ email: 'tom@gmail.com' }} />
+              <Greeting name="Mike" user={{ email: 'mike@gmail.com' }} />
+            </div>
+          );
+        }
+  
+        const element = (
+          <div>
+            <h1>Welcome My Friend</h1>
+            <Greeting name="Tom" age="27" address="188/1 BanthadThong" user={user} />
+            <Greeting name="Mike" age="27" address="188/1 BanthadThong" user={{ email: 'mike@gmail.com' }} />
+            <Greeting name="Jame" age="27" address="188/1 BanthadThong" />
+          </div>
+        );
+        ReactDOM.render(element, document.getElementById('root'));
     </script>
 
 </body>
