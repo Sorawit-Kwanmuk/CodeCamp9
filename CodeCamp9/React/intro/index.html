@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro To React</title>
+    <link rel="stylesheet" href="./main.js">
+</head>
+
+<body>
+    <div id="root"></div>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script>
+        const h1 = React.createElement("h1", {
+            id: 'header',
+            className: 'header',
+            style: {
+                color: 'red',
+                fontSize: '32px'
+            }
+        }, "Hello World"); //<h1 id+"header" class="header" style="color">Hello World</h1>
+        const p = React.createElement("p", {
+            style: {
+                color: 'blue'
+            }
+        }, "Intro to react lesson"); //<p style="color:blue">This is a paragraph.</p>
+        const div = React.createElement("div", {
+            className: 'container'
+        }, h1, p); //<div class="container">
+        ReactDOM.render(div, document.getElementById("root"));
+    </script>
+</body>
+
+</html>

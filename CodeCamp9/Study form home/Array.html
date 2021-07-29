@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <div style="border: 1px solid black; width: 900px; margin-left: 20%; margin-top: 5%; margin-bottom: 5%;">
+            <form action="./index2.html" style="display: flex; flex-flow: column wrap; margin: 10px;" method="POST">
+                <div style="margin: 10px; display: flex; flex-flow: column wrap;">
+                    <label style="margin: 10px 0px;" for="#expense">Expense</label>
+                    <input id="expense" type="text">
+                </div>
+
+                <div style="margin: 10px; display: flex; flex-flow: column wrap;">
+                    <label style="margin: 10px 0px;" for="#amount">Amount</label>
+                    <input id="amount" type="text">
+                </div>
+
+                <div style="margin: 10px; display: flex; flex-flow: column wrap;">
+                    <label style="margin: 10px 0px;" for="#date">Date</label>
+                    <input id="date" type="date">
+                </div>
+
+                <div style="margin: 10px;">
+                    <button type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="data" style="border: 1px solid black; width: 900px; margin-left: 20%;">
+            <div style="margin: 10px;" class="fixed-element">
+                <div class="total" style="text-align: right; margin: 10px;">Total : 0</div>
+            </div>
+
+            <div style="margin: 10px;" class="fixed-element">
+                <hr>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const expense = document.querySelector("#expense");
+        const amount = document.querySelector("#amount");
+        const date = document.querySelector("#date");
+        const form = document.querySelector("form");
+        const data = document.querySelector(".data");
+        let array = [];
+
+        const handleEdit = (id) => {
+            // console.log(id)
+            let expense = prompt("Expense");
+            let amount = prompt("Amount");
+            let date = prompt("date");
+            const dateElement = document.querySelector(`#date-${id.split("-")[1]}`);
+            dateElement.innerHTML = date
+            const expenseElement = document.querySelector(`#expense-${id.split("-")[1]}`);
+            expenseElement.innerHTML = expense
+            const amountElement = document.querySelector(`#amount-${id.split("-")[1]}`);
+            amountElement.innerHTML = amount
+            array[id.split("-")[1]] = {
+                ...array[id.split("-")[1]],
+                expense,
+                amount,
+                date
+            };
+            const total = document.querySelector(".total");
+            let totalAmount = array.reduce((acc, item) => {
+                return +acc + +item.amount
+            }, 0)
+            total.innerHTML = Total(`${totalAmount}`)
+
+        }
+
+        const handleDel = (id) => {
+            const removeElement = document.querySelector(`#listData-${id.split("-")[1]}`);
+            removeElement.remove();
+            const del = array[id.split("-")[1]]
+            const newArray = array.filter((item) => item !== del)
+            array = newArray;
+            const total = document.querySelector(".total");
+            let totalAmount = array.reduce((acc, item) => {
+                return +acc + +item.amount
+            }, 0)
+            total.innerHTML = Total(`${totalAmount}`)
+        }
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            array.push({
+                expense: expense.value,
+                amount: amount.value,
+                date: date.value
+            });
+
+            const div = document.createElement('div');
+            div.className = "list"
+            div.style.display = "flex";
+            div.style.flexFlow = "column wrap";
+            div.style.justifyContent = "space-between";
+            div.style.margin = "10px 20px"
+            for (let index = 0; index < data.childNodes.length; index++) {
+                const element = data.childNodes[index];
+                if (element.className && element.className == "list") {
+                    data.removeChild(element)
+                }
+            }
+            div.innerHTML = array.map((item, index) => `<div id="listData-${index}" style="display: flex; flex-flow: row wrap; justify-content: space-between;">
+            <div id="date-${index}">${item.date}</div>
+            <div id="expense-${index}">${item.expense}</div>
+            <div id="amount-${index}">${item.amount}</div>
+            <div>
+                <button onclick="handleEdit(this.id)" id="edit-${index}">Edit</button> 
+                <button onclick="handleDel(this.id)" id="del-${index}">Del</button>
+            </div>
+            </div>`);
+            data.append(div);
+            const total = document.querySelector(".total");
+            let totalAmount = array.reduce((acc, item) => {
+                return +acc + +item.amount
+            }, 0)
+            total.innerHTML = Total(`${totalAmount}`);
+        });
+    </script>
+
+</body>
+
+</html>

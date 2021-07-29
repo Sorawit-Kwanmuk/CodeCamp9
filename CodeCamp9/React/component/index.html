@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Component and Props</title>
+    <style>
+        .greeting {
+            border: 1px solid green;
+            padding: 1rem;
+            margin: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <!-- <h1>Welcome My Friend</h1>
+    <div className="greeting">
+        <p>Hello John</p>
+    </div>
+    <div className="greeting">
+        <p>Hello Jack</p>
+    </div>
+    <div className="greeting">
+        <p>Hello Jane</p>
+    </div> -->
+    </div>
+    <script type="text/babel">
+        function Greeting(props){
+            console.log(props);
+        return <div className="greeting">Hello {props.user?.name}. My email is {props.user?.email}</div>
+    }
+// function App(props){
+//     return <div>
+//         <Greeting name="John" user={{name: "Tom", email:{{email:'Tom@gmail.com'}}/>
+//         </div>
+// }
+    const user = {
+                name: "John",
+                email: "john@email.com"
+                
+            }
+     const element = (<div>
+        <h1>Welcome My Friend</h1>
+        <Greeting age="23" address="bangkok Thailand" user={user}/>
+        <Greeting name="Bill" age="23" address="bangkok Thailand" user={{email:'bill@gmail.com'}}/>
+        <Greeting name="Win" age="23" address="bangkok Thailand" user={{email:'win@gmail.com'}} />
+        {/*{Greeting({name:'John'})}
+        {Greeting({name:'Jack'})}
+     {Greeting({name:'Jane'})}*/}
+</div>)
+        ReactDOM.render(element, document.getElementById('root'))
+    </script>
+
+</body>
+
+</html>

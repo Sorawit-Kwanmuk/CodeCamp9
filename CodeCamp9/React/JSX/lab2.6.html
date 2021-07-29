@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <title>Lab 2.6</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const str = "String";
+   const num = 42;
+   const bool = true;
+   const nul = null;
+   const und = undefined;
+    const obj = {
+      firstName: "John",
+      lastName: "Doe",
+    }
+const element =
+<>
+<h1>1.{str}</h1>
+<h1>2.{num}</h1>
+<h1>3.{bool}</h1>
+<h1>4.{nul}</h1>
+<h1>5.{und}</h1>
+<h1>6.{/*obj* error เพราะแสดงได้แค่ string และ number เท่านั้น*/}</h1>
+
+</>
+
+        ReactDOM.render(element, document.getElementById('root'))
+    </script>
+</body>
+
+</html>
