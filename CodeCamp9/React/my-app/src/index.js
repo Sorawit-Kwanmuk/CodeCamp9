@@ -1,31 +1,12 @@
-import React, { Component } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-// import { Welcome, Greeting, PI } from "./component/Welcome";
-// import * as W from "./component/Welcome";
-// import MyComponent from "./component/Welcome";
-import MyComponent, { Welcome, Greeting, PI } from "./component/Welcome";
-// function App1() {
-//   return <div>Hello React</div>;
-// }
-function App2() {
-  return (
-    <div>
-      {/* <W.Welcome />
-      <W.Greeting /> */}
-      <Welcome />
-      <Greeting />
-      <MyComponent />
-    </div>
-  );
-}
-console.log(PI);
 ReactDOM.render(
   <React.StrictMode>
-    <App2 />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );
