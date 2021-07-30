@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Lab 3.3</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // function ProductItem(props) {
+        //     return (
+        //         <div>
+        //             <h1>{props.productName}</h1>
+        //             <h2>{props.productPrice}</h2>
+        //             <p>{props.productDescription}</p>
+        //             </div>
+        //     )   
+        // }
+        function ProductItem(productName,productPrice,productDescription) {
+             return (
+             <div>
+                 <h1>{productName}</h1>
+                 <h2>{productPrice}</h2>
+                 <p>{productDescription}</p>
+             </div>
+             )
+        }
+ReactDOM.render(
+<ProductItem productName="mouse logitech M221" productPrice="฿579" productDescription="ขนาด
+เมาส์
+ความสูง: 99 มม.
+ความกว้าง: 60 มม.
+ความลึก: 39 มม.
+น้ำหนัก (รวมแบตเตอรี่): 75.2 กรัม
+ตัวรับสัญญาณ USB
+ความสูง: 14.4 mm
+ความกว้าง: 18.7 mm
+ความลึก: 6.1 มม.
+น้ำหนัก: 1.8 กรัม
+ข้อกำหนดของระบบ
+ตัวรับสัญญาณ USB
+จำเป็น: พอร์ต USB ที่ใช้ได้
+Windows 7, 8, 10 หรือใหม่กว่า
+macOS 10.5 หรือใหม่กว่า
+Chrome OS
+Linux Kernel 2.6+" />,
+document.getElementById('root'));
+    </script>
+</body>
+
+</html>

@@ -2,25 +2,25 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>Component and Props</title>
-    <style>
-        .greeting {
-            border: 1px solid green;
-            padding: 1rem;
-            margin: 0.5rem;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <title>Component and Props</title>
+  <style>
+    .greeting {
+      border: 1px solid green;
+      padding: 1rem;
+      margin: 0.5rem;
+    }
+  </style>
 </head>
 
 <body>
-    <div id="root">
-        <!-- <h1>Welcome My Friend</h1>
+  <div id="root">
+    <!-- <h1>Welcome My Friend</h1>
     <div className="greeting">
         <p>Hello John</p>
     </div>
@@ -30,43 +30,81 @@
     <div className="greeting">
         <p>Hello Jane</p>
     </div> -->
-    </div>
-    <script type="text/babel">
-        function Greeting(props) {
-          // props.name = 'Jessie';
-          console.log(props);
-          return (
-            <div className="greeting">
-              Hello {props.name}. My email is {props.user?.email}
-            </div>
-          );
-        }
-  
-        const user = {
-          name: 'john',
-          email: 'john.d@gmail.com'
-        };
-  
-        function App(props) {
-          return (
-            <div>
-              <Greeting name="Tom" user={{ email: 'tom@gmail.com' }} />
-              <Greeting name="Mike" user={{ email: 'mike@gmail.com' }} />
-            </div>
-          );
-        }
-  
-        const element = (
-          <div>
-            <h1>Welcome My Friend</h1>
-            <Greeting name="Tom" age="27" address="188/1 BanthadThong" user={user} />
-            <Greeting name="Mike" age="27" address="188/1 BanthadThong" user={{ email: 'mike@gmail.com' }} />
-            <Greeting name="Jame" age="27" address="188/1 BanthadThong" />
+  </div>
+  <script type="text/babel">
+    //day1
+      // function Greeting(props) {
+      //   // props.name = 'Jessie';
+      //   console.log(props);
+      //   return (
+      //     <div className="greeting">
+      //       Hello {props.name}. My email is {props.user?.email}
+      //     </div>
+      //   );
+      // }
+
+      // const user = {
+      //   name: 'john',
+      //   email: 'john.d@gmail.com'
+      // };
+
+      // function App(props) {
+      //   return (
+      //     <div>
+      //       <Greeting name="Tom" user={{ email: 'tom@gmail.com' }} />
+      //       <Greeting name="Mike" user={{ email: 'mike@gmail.com' }} />
+      //     </div>
+      //   );
+      // }
+
+      // const element = (
+      //   <div>
+      //     <h1>Welcome My Friend</h1>
+      //     <Greeting name="Tom" age="27" address="188/1 BanthadThong" user={user} />
+      //     <Greeting name="Mike" age="27" address="188/1 BanthadThong" user={{ email: 'mike@gmail.com' }} />
+      //     <Greeting name="Jame" age="27" address="188/1 BanthadThong" />
+      //   </div>
+      // );
+      // ReactDOM.render(element, document.getElementById('root'));
+      //day2
+      function Comment(props) {
+        const size = 100;
+        return (
+          <div className="Comment">
+            <UserInfo avatarUrl={props.avatarUrl} name={props.name} size={size} />
+            <div className="Comment-text">{props.text}</div>
+            <div className="Comment-date">{props.date}</div>
           </div>
         );
-        ReactDOM.render(element, document.getElementById('root'));
-    </script>
+      }
 
+      function UserInfo(props) {//{avatarUrl:'ค่าสักอย่างนึง' name:"ค่าสักอย่างนึง" size:'ค่าสักอย่างนึง'}
+        return (
+          <div className="UserInfo">
+            {/*<Avatar avatarUrl={props.avatarUrl} name={props.name} size={props.size} />*/}
+            <Avatar {...props} /> {/* avatarUrl='ค่าสักอย่างนึง' name="ค่าสักอย่างนึง" size='ค่าสักอย่างนึง' */}
+            <div className="UserInfo-name">{props.name}</div>
+          </div>
+        );
+      }
+
+      function Avatar(props) {
+        console.log(props.size);
+        return (
+          <img className="Avatar" src={props.avatarUrl} alt={props.name} />
+        );
+      }
+
+      ReactDOM.render(
+        <Comment
+          avatarUrl="https://picsum.photos/id/237/200/300"
+          name="Black Dog"
+          text="My lovely dog"
+          date="30 jul 2021 09.21"
+        />,
+        document.getElementById("root")
+      );
+    </script>
 </body>
 
 </html>

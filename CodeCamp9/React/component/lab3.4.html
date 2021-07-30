@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Lab 3.4</title>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        function ProductItem({productItem}) {
+            return (
+                <div>
+                    <h1>{productItem.productName}</h1>
+                    <h2>{productItem.productPrice}</h2>
+                    <p>{productItem.productDescription}</p>
+                    </div>
+            )
+}  
+    const productItem = {
+        productName: 'mouse logitech M221',
+        productPrice: '฿579',
+        productDescription:'ขนาดเมาส์ความสูง: 99 มม.ความกว้าง: 60 มม.ความลึก: 39 มม.น้ำหนัก (รวมแบตเตอรี่): 75.2 กรัม ตัวรับสัญญาณ USB'
+    }
+ReactDOM.render(
+<ProductItem productItem={productItem} />,
+document.getElementById('root'));
+    </script>
+</body>
+
+</html>
