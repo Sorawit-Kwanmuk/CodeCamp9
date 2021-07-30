@@ -1,0 +1,6 @@
+.menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    background-color: aqua;
+}
