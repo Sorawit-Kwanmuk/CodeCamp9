@@ -1,61 +1,63 @@
 import './App.css';
+import React, { useState } from 'react';
 function App() {
-  const handleClice = () => {
-    alert('You clicked me!');
-  };
-  const handleSubmit = event => {
-    // alert('Form is submitted!');
-    event.preventDefault();
-    console.log('Form is submitted!');
-  };
-  const handleSelect = () => {
-    alert('You value has been change');
-  };
-  const handleClickButtonWithId = (id, event) => {
-    alert(`You clicked button with id: ${id}`);
-  };
-  return (
-    <div style={{ margin: '3rem' }}>
-      <button onClick={handleClice}>Click</button>
-      <button onClick={() => alert('Annonymous function arrow')}>
-        Click Annonymous Click Annonymous
-      </button>
-      <button
-        onClick={function () {
-          alert('Anonymous function expression');
-        }}>
-        Click Function
-      </button>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor='username'>Username : </label>
-        {/* <input
-          type='text'
-          id='username'
-          onChange={() => alert('input has been change')}
-        />  */}
-        <input
-          type='text'
-          id='username'
-          onChange={event => console.log(event.target.value)}
-        />
-        <label htmlFor=''>Please Select : </label>
-        <select name='' id='' onChange={handleSelect}>
-          <option value=''>1</option>
-          <option value=''>2</option>
-        </select>
-        <button>Submit</button>
-      </form>
-      <a
-        href='https://www.google.co.th/'
-        onClick={event => event.preventDefault()}>
-        Google
-      </a>
-      <button onClick={() => handleClickButtonWithId(1, null)}>ID: 1</button>
-      <button onClick={event => handleClickButtonWithId(2, event)}>
-        ID: 2
-      </button>
-    </div>
-  );
+  // const result = useState('Hello React!!!!'); //การกำหนดค่าเริ่มต้นของstate
+  // const state = result[0];
+  // const update = result[1];
+  //shoter version but not good
+  // const [state, update] = useState('Hello React!!!!');
+  // const [state1, update1] = useState('Hello React!!!!');
+  // const [state2, update2] = useState('Hello React!!!!');
+  //shot and goode version const [???,set???] = useState('Hello React!!!!');
+  // const [message, setMessage] = useState('Hello React');
+
+  //   const handleClick = () => {
+  //     setMessage('You clicked a button');
+  //   };
+  //   return (
+  //     <div>
+  //       <h1>{message}</h1>
+  //       <button onClick={handleClick}>Click to change Text</button>
+  //       <button onClick={() => setMessage('Tou Clicked Annonymous')}>
+  //         Click to change Text Annonymous
+  //       </button>
+  //     </div>
+  //   );
+
+  // const [count, setCount] = useState(0);
+  // const handleClickAdd = () => {
+  //   // setCount(count + 1);
+  //   //recommend use useCallback
+  //   setCount(currentCount => currentCount + 1);
+  // };
+  // const handleClickSubtract = () => {
+  //   // setCount(count - 1);
+  //   setCount(currentCount => currentCount - 1);
+  // };
+  // const handleClickReset = () => {
+  //   setCount(0);
+  // };
+
+  // return (
+  //   <div className='container'>
+  //     <button onClick={handleClickAdd}>+</button>
+  //     <span>{count}</span>
+  //     <button onClick={handleClickSubtract}>-</button>
+  //     <button onClick={handleClickReset}>Reset</button>
+  //   </div>
+  // );
+
+  // const [username, setUsername] = useState('');
+  // const [password, setPassword] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [birthDate, setBirthDate] = useState('');
+
+  const [user, setUser] = useState({
+    username: '',
+    password: '',
+    email: '',
+    birthDate: '',
+  });
 }
 
 export default App;
