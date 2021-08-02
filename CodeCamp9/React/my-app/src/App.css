@@ -1,0 +1,21 @@
+.counter {
+  padding: 2rem;
+}
+
+.btn {
+  padding: 0.375rem 0.75rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: #555555;
+  color: white;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
+.current {
+  margin-right: 1rem;
+}
