@@ -1,41 +1,32 @@
 import './App.css';
 function App() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <button
-        style={{
-          padding: '0.375rem 0.75rem',
-          border: '1px solid black',
-          borderRadius: '4px',
-          backgroundColor: '#555555',
-          color: '#fff',
-          marginRight: '1rem',
-        }}>
-        +
-      </button>
-      <span style={{ marginRight: '1rem' }}>0</span>
-      <button
-        style={{
-          padding: '0.375rem 0.75rem',
-          border: '1px solid black',
-          borderRadius: '4px',
-          backgroundColor: '#555555',
-          color: '#fff',
-          marginRight: '1rem',
-        }}>
-        -
-      </button>
-      <button
-        style={{
-          padding: '0.375rem 0.75rem',
-          border: '1px solid black',
-          borderRadius: '4px',
-          backgroundColor: '#555555',
-          color: '#fff',
-          marginRight: '1rem',
-        }}>
-        Reset
-      </button>
+    <div>
+      <div className='header'>
+        <button className='btn'></button>
+      </div>
+      <div className='cintainer'>
+        <div className='card active'>
+          <h1>Player 1</h1>
+          <p className='player-score'>0</p>
+        </div>
+        <div className='card'>
+          <div className='row'>
+            <button className='btn btn-danger btn-fw'>Row</button>
+            <button className='btn btn-success btn-fw'>Keep</button>
+          </div>
+          <div className='row'>
+            <div className='dice-score'>0</div>
+          </div>
+          <div className='row'>
+            <p className='round-score'>Round Score: 0</p>
+          </div>
+        </div>
+        <div className='card'>
+          <h1>Player 2</h1>
+          <p className='player-score'>0</p>
+        </div>
+      </div>
     </div>
   );
 }
