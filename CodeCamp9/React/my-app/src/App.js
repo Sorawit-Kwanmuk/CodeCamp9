@@ -10,7 +10,6 @@ function App() {
   // const [state2, update2] = useState('Hello React!!!!');
   //shot and goode version const [???,set???] = useState('Hello React!!!!');
   // const [message, setMessage] = useState('Hello React');
-
   //   const handleClick = () => {
   //     setMessage('You clicked a button');
   //   };
@@ -23,7 +22,6 @@ function App() {
   //       </button>
   //     </div>
   //   );
-
   // const [count, setCount] = useState(0);
   // const handleClickAdd = () => {
   //   // setCount(count + 1);
@@ -37,7 +35,6 @@ function App() {
   // const handleClickReset = () => {
   //   setCount(0);
   // };
-
   // return (
   //   <div className='container'>
   //     <button onClick={handleClickAdd}>+</button>
@@ -46,18 +43,23 @@ function App() {
   //     <button onClick={handleClickReset}>Reset</button>
   //   </div>
   // );
-
   // const [username, setUsername] = useState('');
   // const [password, setPassword] = useState('');
   // const [email, setEmail] = useState('');
   // const [birthDate, setBirthDate] = useState('');
-
-  const [user, setUser] = useState({
-    username: '',
-    password: '',
-    email: '',
-    birthDate: '',
-  });
+  // const arr = [1, 2, 3, 4];
+  // const list = arr.map((el, idx) => <li key={idx}>{el}</li>);
+  // //ใช้indexเป็นkey
+  // return <ul>{list}</ul>;
+  function App() {
+    const arr = [
+      { id: '16099', name: 'John' },
+      { id: '2133', name: 'Jack' },
+    ];
+    const list = arr.map(el => <li key={el.id}>{el.name}</li>);
+    //ใช้idเป็นkey
+    return <ul>{list}</ul>;
+  }
 }
 
 export default App;
