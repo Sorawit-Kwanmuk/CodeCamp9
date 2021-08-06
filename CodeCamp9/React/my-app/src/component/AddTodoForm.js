@@ -26,6 +26,7 @@ function AddTodoForm(props) {
         type='text'
         placeholder='Enter new todo'
         value={newTodo}
+        style={{ marginTop: '1rem' }}
         onChange={handleChangeNewTodo}
       />
       <button onClick={handleClickAdd}>Add</button>
