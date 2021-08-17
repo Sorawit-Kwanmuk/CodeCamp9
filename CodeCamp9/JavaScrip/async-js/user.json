@@ -1,9 +1,9 @@
 {
-  "user": [
-    { "email": "example1@email.com", "password": "123456", "point": 1 },
-    { "email": "example2@email.com", "password": "654321", "point": 2 },
-    { "email": "example3@email.com", "password": "142536", "point": 3 },
-    { "email": "example4@email.com", "password": "635241", "point": 4 },
-    { "email": "example5@email.com", "password": "456123", "point": 5 }
+  "users": [
+    { "id": 5678, "email": "example1@email.com", "password": "123456", "point": 100 },
+    { "id": 5679, "email": "example2@email.com", "password": "654321", "point": 50 },
+    { "id": 5680, "email": "example3@email.com", "password": "142536", "point": 0 },
+    { "id": 5681, "email": "example4@email.com", "password": "635241", "point": 10 },
+    { "id": 5682, "email": "example5@email.com", "password": "456123", "point": 15 }
   ]
 }

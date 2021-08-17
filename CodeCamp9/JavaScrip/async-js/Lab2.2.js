@@ -3,7 +3,7 @@ const person = {
   lastName: 'Doe',
   wife: undefined, //ใช้ undefined ไม่ได้
   getFullName() {
-    //ใช้ function ไม่ได้
+    //เป็น method function ไม่ได้
     return this.firstName + ' ' + this.lastName;
   },
 };

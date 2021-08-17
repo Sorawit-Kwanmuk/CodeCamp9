@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1345,
+      "name": "Paprika",
+      "price": 20
+    },
+    {
+      "id": 1346,
+      "name": "Potae",
+      "price": 18
+    },
+    {
+      "id": 1347,
+      "name": "Cornae",
+      "price": 17
+    }
+  ]
+}
