@@ -1,5 +1,5 @@
 // lab4.1
-//callbacktail
+// callbacktail;
 // console.log('A');
 // setTimeout(() => {
 //   console.log('B');
