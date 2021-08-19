@@ -1,0 +1,38 @@
+[
+  {
+    "id": "05a8132f-7f56-45fc-b19a-71cae9b27433",
+    "email": "example1@email.com",
+    "password": "123456",
+    "point": 100
+  },
+  {
+    "id": "13230696-c5e8-4a1e-ac33-056d0567a04e",
+    "email": "example2@email.com",
+    "password": "654321",
+    "point": 50
+  },
+  {
+    "id": "5faa9aac-1976-4ffa-a486-f75c151c10c2",
+    "email": "example3@email.com",
+    "password": "142536",
+    "point": 0
+  },
+  {
+    "id": "fb242faf-80c7-4965-91bc-d2efb65d31f2",
+    "email": "example4@email.com",
+    "password": "635241",
+    "point": 10
+  },
+  {
+    "id": "e07bd712-d17a-4277-b9af-ef46310c3c9b",
+    "email": "example5@email.com",
+    "password": "456123",
+    "point": 15
+  },
+  {
+    "id": "acac2fdb-0cf0-4dc9-b4a3-4d71d061e458",
+    "email": "example6@email.com",
+    "password": "461523",
+    "point": 20
+  }
+]

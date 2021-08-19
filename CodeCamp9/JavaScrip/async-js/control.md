@@ -1,3 +1,4 @@
 - `node index.js`
 - `dode ตามด้วยชื่อไฟล์`
-- `$ npm init -y` install package.json
+- `npm init -y` install package.json
+- `npm i axios`
