@@ -1,75 +1,100 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import './App.css';
-import { v4 as uuidv4 } from 'uuid';
-import Counter from './components/Counter';
+import { useReducer, useState } from 'react';
+import Text from './components/Text';
+import Button from './components/button';
+import { CountProvider } from './contexts/CountContext';
 
-let i = 1;
+//ทุกครั้งที่ click ที่อาจจะก่อให้เกิดการเปลี่ยนแปลง state จะถูกเรียกว่า action
+// dispatch({ type: 'INCREMENT' });
+// state : {count: 0}
+// const INITIAL_STATE = { count: 0, error: '' }; //กำหนดหน้าตา state เริ่มต้น
+// const CounterReducer = (state = 0, action) => {
+// สิ่งที่ return ออกมา จะเป็นค่าขของ state ถัดไป หรือก็คือค่า setState
+// action ประกอบด้วย + - Reset => INCREMENT DECREMENT RESET เพิ่ม action STEP
+// if (action.type === 'INCREMENT') {
+//   const cloneState = { ...state };
+//   cloneState.count += 1;
+//   // return { ...state, count: state.count + 1 };//ส่วนใหญ่เขียนแบบนี้
+//   return cloneState;
+// } else if (action.type === 'DECREMENT') {
+//   if (state.count > 0) {
+//     const cloneState = { ...state };
+//     cloneState.count -= 1;
+//     // return { ...state, count: state.count - 1 }
+//     return cloneState;
+//   }
+// } else if (action.type === 'RESET') {
+//   const cloneState = { ...state };
+//   cloneState.count = 0;
+//   // return { ...state, count: 0 };
+//   return cloneState;
+// } else {
+//   //ดักการเรียกใช้ action.type นอกเหนือจากที่มี
+//   return state;
+// }
+//ส่วนใหญ่เขียนเป็น switch case
+// const CounterReducer = (state, action) => {
+//   switch (action.type) {
+//     case 'INCREMENT': {
+//       const cloneState = { ...state };
+//       cloneState.count += 1;
+//       return cloneState;
+//     }
+//     case 'STEP': {
+//       const cloneState = { ...state };
+//       cloneState.count = state.count + action.payload.step;
+//       // return {...state, count = state.count + action.payload.step;}
+//       return cloneState;
+//     }
+//     case 'DECREMENT': {
+//       if (state.count > 0) {
+//         const cloneState = { ...state };
+//         cloneState.count -= 1;
+//         return cloneState;
+//       }
+//       return state;
+//     }
+//     case 'RESET': {
+//       const cloneState = { ...state };
+//       cloneState.count = 0;
+//       return cloneState;
+//     }
+
+//     default:
+//       return state;
+//   }
+// };
+//payload คือค่าอื่นที่เราอยากส่งเข้าไปผ่านทาง dispatch
+// function App() {
+// const [state, dispatch] = useReducer(CounterReducer, INITIAL_STATE);
+// const [step, setStep] = useState(0);
+// return (
+// <div style={{ padding: '4rem' }}>
+// {
+//   /* <input type='text' onChange={e => setStep(+e.target.value)} /> */
+// }
+// {
+//   /* <h1>{state.count}</h1> */
+// }
+// {
+//   /* <button onClick={() => dispatch({ type: 'INCREMENT' })}>+</button>
+//       <button onClick={() => dispatch({ type: 'STEP', payload: { step } })}>Step</button>
+//       <button onClick={() => dispatch({ type: 'DECREMENT' })}>-</button>
+//       <button onClick={() => dispatch({ type: 'RESET' })}>Reset</button> */
+// }
+// {
+//   /* </div> */
+// }
+// );
+// }
 function App() {
-  // const [count, setCount] = useState(0);
-  // const [language, setLanguage] = useState('THAI');
-  // const [users, setUsers] = useState([
-  //   { id: uuidv4, name: 'John', username: 'J.Junior', password: 123456789 },
-  // ]);
-
-  // useEffect(
-  //   () => {
-  //     // setLanguage(currentLanguage => (currentLanguage === 'THAI' ? 'ENG' : 'THAI')); ห้าม setState ที่อยู่ใน dependency array ด้านในแบบนี้ เพราะทุกครั้งที่ stateมันเปลี่ยน
-  //     //มันจะเรียก ใช้ function อีกครั้ง และจะเกิด infinitloop
-  //     //ตัวแรกคือ callback effeck จะทำงานทุกครั้งที่ lender หน้าเว็บ หรือ state มีการเปลี่ยนนแปลง
-  //     console.log(i); // เป็น side effect เพราะ console.log เป็นคำสั่ง global อยู่นอกเหนือจาก scope ของ App
-  //     i++;
-  //     document.title = language === 'THAI' ? 'สวัสดีรีแอค' : 'Hello React'; // เป็น side effect เช่นกัน
-  //   },
-  //   [count, language] //   //ตัวที่2 คือ array ไม่ต้องใส่ก็ได้ ค่าตัวแปรที่ใส่ในนี้จะเป็นตัวกำหนดให้ useEffect ทำงาน
-  //   //ตัวอย่าง ถ้าใส่ count มันจะดูว่าเมื่อมีการ relenderค่า count เปลี่ยนแปลงไหม ถ้าไม่เปลี่ยน จะไม่มีการเรียกใช้งาน function ใน useEffect
-  //   //ถ้าไม่ใส่ array เลย หมายความว่า ไม่ว่า state ตัวใหนเปลียน function ใน useEffect ก็จะทำงาน
-  //   //ถ้าใส่ array เปล่า [] มันจำทำงาน function ใน useEffect แค่ครั้งแรกเท่านั้น
-  // );
-  // useEffect(() => {
-  //   const fetchUsers = async () => {
-  //     const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-  //     setUsers(current => [...current, ...response.data]);
-  //   };
-  //   fetchUsers();
-  // }, []);
-
-  // return (
-  //   <div>
-  //     {/* Hello useEffect
-  //     <button onClick={() => setCount(currentCount => currentCount + 1)}>Click</button>
-  //     <button
-  //       onClick={() =>
-  //         setLanguage(currentLanguage => (currentLanguage === 'THAI' ? 'ENG' : 'THAI'))
-  //       }>
-  //       Change Language
-  //     </button> */}
-  //     <ul>
-  //       {users.map(item => (
-  //         <li key={item.id}>
-  //           <p>{item.name}</p>
-  //           <p>{item.username}</p>
-  //           <p>{item.password}</p>
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   </div>
-  // );
-
-  // const [second, setSecond] = useState(0);
-
-  // useEffect(() => {
-  //   setInterval(() => {
-  //     setSecond(currentSecond => currentSecond + 1);
-  //   }, 1000);
-  // });
-  const [show, setShow] = useState(true);
-
   return (
-    <>
-      <button onClick={() => setShow(current => !current)}>Toggle Counter</button>
-      {show && <Counter />}
-    </>
+    <CountProvider>
+      <div style={{ padding: '4rem' }}>
+        <Text />
+        <Button />
+      </div>
+    </CountProvider>
   );
 }
 
