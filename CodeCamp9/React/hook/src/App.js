@@ -1,49 +1,86 @@
 import './App.css';
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import ContactUs from './pages/ContactUs';
-import Product from './pages/Product';
-import Login from './pages/Login';
-import { useState } from 'react';
+import { Component } from 'react';
+import CountText from './components/CountText';
 
-// '/' render Home
-// '/Contact' render ContactUs
-// '/Product' render Product
-//มันจะหาจาก path='/Contact'  จากคำที่เหมือนกัน เช่น ถึงจะพิมพ์ path='/Contactrtgherthrth' มันก็จะไปที่หน้า ContactUs อยู่ดี
-//ดังนั้น ถ้าให้  path='/' อยู่บนสุด ไม่ว่าจะพิมพ์อะไรหลัง / มันก็จะไปที่หน้า home จึงต้องนำ  path='/' ไว้ที่ด้านล่างสุด
-//exact path='/' คิอต้องครงตัวอักษรถึงจะไปที่หน้านั้นได้
-function App() {
-  // const [state, setState] = useState(0);
-  return (
-    <div style={{ padding: '4rem' }}>
-      <BrowserRouter>
-        <ul>
-          <li>
-            <Link to='/'>Home</Link>
-          </li>
-          <li>
-            <Link to='/Contact'>ContactUs</Link>
-          </li>
-          <li>
-            <Link to='/Product'>Product</Link>
-          </li>
-          <li>
-            <Link to='/Login'>Login</Link>
-          </li>
-        </ul>
-        <Switch>
-          {/* <Route exact path='/' component={Home} /> */}
-          <Route path='/Contact' component={ContactUs} />
-          {/* <Route path='/Contact' render={() => <ContactUs state={state} />} /> */}
-          {/*isExact จะมีค่าเป็นจริงเมื่อ ทุกตัวเหมือนกันทั้งพิมพ์เล็กพิมพ์ใหญ่*/}
-          <Route path='/Product/:id' component={Product} />
-          {/* /product/4 = id is 4 */}
-          <Route path='/login' component={Login} />
-          <Route path='/' component={Home} />
-        </Switch>
-      </BrowserRouter>
-    </div>
-  );
+// function App() {
+//   // const [state, setState] = useState(0);
+//   return (
+//     <div>
+//       <h1>Counter App</h1>
+//       <h2>0</h2>
+//       <button>+</button>
+//       <button>-</button>
+//       <button>Reset</button>
+//     </div>
+//   );
+// }
+
+// class A {
+//   //property
+//   name = 'John';
+//   birthYear = 1998;
+//   //method
+//   sayHi() {
+//     console.log(
+//       'Hello. My name is ' + this.name + ' and I am ' + this.calcAge() + ' years old.'
+//     );
+//   }
+//   calcAge() {
+//     return new Date().getFullYear() - this.birthYear;
+//   }
+// }
+// //instan of class objA สร้างมาจาก class A มี method และ property ทั้งหมดของ class A
+// const objA = new A();
+// objA.sayHi();
+
+class App extends Component {
+  // App ไปสืบทอดทุกสิ่ง มาจาก class Component
+  //#1 Declare state
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     count: 0,
+  //     error: '',
+  //   };
+  // }
+  //#2 ประกาศเป็น property ตัวนึง
+  state = {
+    count: 0,
+    error: '',
+  };
+
+  handleClichIncrement = () => {
+    //increse count by 1
+    this.setState({ count: this.state.count + 1 }); // new state : {count:1,error:''}
+  };
+  // handleClichIncrement(){}
+  handleClichDecrement = () => {
+    this.setState({
+      count: this.state.count > 0 ? this.state.count - 1 : this.state.count,
+    });
+  };
+  handleClichReset = () => {
+    this.setState({ count: 0 });
+  };
+
+  render() {
+    const {
+      state: { count },
+    } = this; // {state:, handleClichIncrement, handleClichDecrement, handleClichReset}
+    return (
+      <div style={{ padding: '4rem' }}>
+        <h1>Counter App</h1>
+        {/* <h2>{this.state.count}</h2> */}
+        <CountText count={count} />
+        <button onClick={this.handleClichIncrement}>+</button>
+        <button onClick={this.handleClichDecrement}>-</button>
+        <button onClick={this.handleClichReset}>Reset</button>
+      </div>
+    );
+  }
 }
+
+const app = new App();
+app.render();
 
 export default App;
